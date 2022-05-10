@@ -15,7 +15,7 @@ namespace HWS_2022_09_05_Factory
             Proffession = nameof(Nutritionist);
             Costumer = (Costumer?)costumer;
         }
-        public DietFactory? ReturnDietFactory()
+        public DietFactory? ReturnCreator()
         {
             if (Costumer != null)
             {

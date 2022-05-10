@@ -14,7 +14,7 @@ namespace HWS_2022_09_05_Factory
 
             //creating the correct creator from the factory by the
             //values of the costumer:
-            DietFactory? dietFactory = nutro.ReturnDietFactory();
+            DietFactory? dietFactory = nutro.ReturnCreator();
 
             //the dietfactory will return us a correct diet then:
             Diet? diet = dietFactory?.ReturnDiet();
