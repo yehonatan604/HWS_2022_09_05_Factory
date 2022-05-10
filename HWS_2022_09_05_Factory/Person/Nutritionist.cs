@@ -9,11 +9,11 @@ namespace HWS_2022_09_05_Factory
     public class Nutritionist : Person
     {
         private Costumer? Costumer;
-        public Nutritionist(string? name, Costumer? costumer)
+        public Nutritionist(string? name, Person? costumer)
         {
             Name = name;
             Proffession = nameof(Nutritionist);
-            Costumer = costumer;
+            Costumer = (Costumer?)costumer;
         }
         public DietFactory? ReturnDietFactory()
         {

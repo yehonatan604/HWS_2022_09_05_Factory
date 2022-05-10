@@ -7,13 +7,13 @@ namespace HWS_2022_09_05_Factory
         static void Main(string[] args)
         {
             //Creating Costumer
-            Costumer joe = new Costumer("Joe",36, 70, 1.7);
+            Person joe = new Costumer("Joe",36, 70, 1.7);
 
             //creating Nutritionist 
-            Nutritionist? nutro = new Nutritionist("Dr. Shiquawa", joe);
+            Nutritionist? nutro = new("Dr. Shiquawa", joe);
 
             //creating the correct creator from the factory by the
-            //values we gave to the Nutritionist:
+            //values of the costumer:
 
             DietFactory? dietFactory = nutro.ReturnDietFactory();
 
