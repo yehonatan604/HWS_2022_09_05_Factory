@@ -7,21 +7,18 @@ namespace HWS_2022_09_05_Factory
         static void Main(string[] args)
         {
             //Creating Costumer:
-            Person joe = new Costumer("Joe",36, 70, 1.7);
-
-            //creating Nutritionist: 
-            Nutritionist? nutro = new("Dr. Shiquawa", joe);
+            Person costumer = new("Maor",35, 88, 1.78);
 
             //creating the correct creator from the factory by the
             //values of the costumer:
-            DietFactory? dietFactory = nutro.ReturnCreator();
+            DietFactory? dietFactory = DietFactory.ReturnCreator(costumer);
 
             //the dietfactory will return us a correct diet then:
             Diet? diet = dietFactory?.ReturnDiet();
 
             //print the menu of the correct diet:
-            Console.WriteLine(joe + ":\n");
-            Console.WriteLine(diet + ":\n");
+            Console.WriteLine($"Costumer:\n{costumer}\n");
+            Console.WriteLine($"{diet}\n");
             diet?.ReturnMenu()?.ForEach(MenuItem => Console.WriteLine(MenuItem));
         }
     }

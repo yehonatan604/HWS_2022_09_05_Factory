@@ -17,10 +17,11 @@ namespace HWS_2022_09_05_Factory
         {
             return Menu;
         }
-        //ovveriding ToString to print Name
+
+        //ovveriding ToString to print diet Name
         public override string? ToString()
         {
-            return Name;
+            return "Diet: " + Name;
         }
     }
 }
